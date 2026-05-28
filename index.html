@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Business Name – Wholesale Bags</title>
+    <!-- Link to our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ====== NAVIGATION (sticky top bar) ====== -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">LOGO</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#catalogue">Catalogue</a></li>
+                <li><a href="#order">Bulk Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ====== HOME SECTION ====== -->
+    <section id="home" class="hero">
+        <h1>Premium Wholesale Bags</h1>
+        <p>Your one-stop source for travel bags, school bags, rucksacks, executive bags & laptop bags. Bulk orders only.</p>
+        <a href="#catalogue" class="btn">View Catalogue</a>
+    </section>
+
+    <!-- ====== ABOUT SECTION ====== -->
+    <section id="about" class="section">
+        <h2>About Our Business</h2>
+        <p>We are a trusted wholesale trader specializing in a wide range of bags from multiple brands. With years of experience, we supply quality products to retailers, corporate clients, and educational institutions. Our inventory includes travel bags, school bags, rucksacks, executive bags, laptop bags, and more. Minimum order quantities apply – perfect for businesses looking to stock up.</p>
+    </section>
+
+    <!-- ====== CATALOGUE SECTION ====== -->
+    <section id="catalogue" class="section">
+        <h2>Our Catalogue</h2>
+        <!-- Category filter buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="travel">Travel Bags</button>
+            <button class="filter-btn" data-category="school">School Bags</button>
+            <button class="filter-btn" data-category="rucksack">Rucksacks</button>
+            <button class="filter-btn" data-category="executive">Executive Bags</button>
+            <button class="filter-btn" data-category="laptop">Laptop Bags</button>
+        </div>
+
+        <!-- Product grid (dummy products; replace with your real items) -->
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be inserted by JavaScript -->
+        </div>
+        <p class="catalogue-note"><em>*All products available for bulk purchase only. Contact us for brand lists and pricing.</em></p>
+    </section>
+
+    <!-- ====== BULK ORDER FORM SECTION ====== -->
+    <section id="order" class="section section-alt">
+        <h2>Enquire for Bulk Order</h2>
+        <p>Fill in the details below and we’ll get back to you with a competitive quote.</p>
+        <!-- The form uses Formspree to send emails (free). Replace the action URL with yours. -->
+        <form id="orderForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company">
+            </div>
+            <div class="form-group">
+                <label for="product">Product Interest *</label>
+                <select id="product" name="product" required>
+                    <option value="">-- Select a category --</option>
+                    <option value="travel">Travel Bags</option>
+                    <option value="school">School Bags</option>
+                    <option value="rucksack">Rucksacks</option>
+                    <option value="executive">Executive Bags</option>
+                    <option value="laptop">Laptop Bags</option>
+                    <option value="multiple">Multiple Categories</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Approximate Quantity (pieces)</label>
+                <input type="number" id="quantity" name="quantity" min="1">
+            </div>
+            <div class="form-group">
+                <label for="message">Additional Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit Enquiry</button>
+            <p id="formStatus" class="form-status"></p>
+        </form>
+    </section>
+
+    <!-- ====== CONTACT / ADDRESS SECTION ====== -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <p><strong>📍 Address:</strong> 123 Wholesale Market, Main Road, Your City, India</p>
+            <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+            <p><strong>✉️ Email:</strong> info@yourbusiness.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Your Business Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
