@@ -4,37 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> SOHIL TRADING – Wholesale Bags Dealer</title>
+    <!-- Modern font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Link to our CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- ====== NAVIGATION (sticky top bar) ====== -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">LOGO</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#catalogue">Catalogue</a></li>
-                <li><a href="#order">Bulk Order</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<nav class="navbar">
+    <div class="logo">BAGTRADE</div>
+    <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#catalogue">Catalogue</a></li>
+        <li><a href="#order">Bulk Order</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
     <!-- ====== HOME SECTION ====== -->
-    <section id="home" class="hero">
-        <h1>Premium Bags</h1>
-        <p>Your one-stop source for travel bags, school bags, rucksacks, executive bags & laptop bags. Bulk orders only.</p>
-        <a href="#catalogue" class="btn">View Catalogue</a>
-    </section>
+<section id="home" class="hero">
+    <span class="section-label">Established 2015</span>
+    <h1>Premium <span class="accent-text">Wholesale Bags</span></h1>
+    <p>Curated collection of travel bags, school bags, rucksacks, executive bags & laptop bags for bulk buyers. Quality guaranteed.</p>
+    <a href="#catalogue" class="btn">Explore Collection</a>
+    <a href="#order" class="btn btn-outline" style="margin-left: 1rem;">Request Quote</a>
+</section>
 
     <!-- ====== ABOUT SECTION ====== -->
-    <section id="about" class="section">
-        <h2>About Our Business</h2>
-        <p>We are a trusted wholesale trader specializing in a wide range of bags from multiple brands. With years of experience, we supply quality products to retailers, corporate clients, and educational institutions. Our inventory includes travel bags, school bags, rucksacks, executive bags, laptop bags, and more. Minimum order quantities apply – perfect for businesses looking to stock up.</p>
-    </section>
+<section id="about" class="section">
+    <span class="section-label">About Us</span>
+    <div class="about-content">
+        <div class="about-text">
+            <h2>Trusted Wholesale Partner</h2>
+            <p>We are a premier wholesale trader specializing in a comprehensive range of bags from renowned brands. Our extensive inventory serves retailers, corporate clients, and educational institutions across the country.</p>
+            <p>With a focus on quality, competitive pricing, and reliable supply, we ensure your business gets the best products for your customers. Minimum order quantities apply.</p>
+        </div>
+        <div class="about-stats">
+            <div class="stat-item">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Brands</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Products</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Clients</span>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- ====== CATALOGUE SECTION ====== -->
     <section id="catalogue" class="section">
@@ -104,14 +133,39 @@
     </section>
 
     <!-- ====== CONTACT / ADDRESS SECTION ====== -->
-    <section id="contact" class="section">
-        <h2>Contact Us</h2>
-        <div class="contact-details">
-            <p><strong>📍 Address:</strong> 4/759-61,1st Floor, Kinkhabwala Chambers,Tower Road, Surat, Gujarat, India</p>
-            <p><strong>📞 Phone:</strong> +91 99044 40874</p>
-            <p><strong>✉️ Email:</strong> citizenbags123@gmail.com</p>
+<section id="contact" class="section">
+    <span class="section-label">Get In Touch</span>
+    <h2>Contact Us</h2>
+    <p class="section-subtitle">Visit our shop or reach out for inquiries</p>
+    <div class="contact-grid">
+        <div class="contact-info">
+            <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <div class="contact-text">
+                    <h4>Address</h4>
+                    <p>123 4/759-61, Kinkhabwala Chambers, Tower Road<br>Surat, Gujarat - 395001</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">📞</span>
+                <div class="contact-text">
+                    <h4>Phone</h4>
+                    <p>+91 99044 40874<br>+91 99044 40874</p>
+                </div>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">✉️</span>
+                <div class="contact-text">
+                    <h4>Email</h4>
+                    <p>citizenbags123@gmail.com<br>citizenbags123@gmail.com</p>
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="contact-map">
+            <p>Google Map Embed Here<br><small>(Add your map iframe)</small></p>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
