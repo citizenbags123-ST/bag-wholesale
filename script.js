@@ -1,6 +1,6 @@
 // Dummy product data – replace these with your real products later
 const products = [
-    { name: "Explorer Pro 50L", category: "travel", brand: "WildGear", img: "https://via.placeholder.com/300x200?text=Travel+Bag" },
+    { name: "Acer", category: "Backpack", brand: "Swordfish", img: "https://drive.google.com/file/d/1Tdbm4-HOP_bqWXvSDPAHMhfM6_un54Np/view?usp=drive_link" },
     { name: "JetSet Carry-On", category: "travel", brand: "SkyLine", img: "https://via.placeholder.com/300x200?text=Travel+Bag" },
     { name: "KidzPack Classic", category: "school", brand: "BrightSchool", img: "https://via.placeholder.com/300x200?text=School+Bag" },
     { name: "Campus Light", category: "school", brand: "EduCarry", img: "https://via.placeholder.com/300x200?text=School+Bag" },
