@@ -14,11 +14,11 @@ const products = [
         img: "https://images.unsplash.com/photo-1581553680321-4fffae59fccd?w=600&h=400&fit=crop"
     },
     {
-        name: "KidzPack Classic",
-        category: "school",
-        brand: "BrightSchool",
-        img: "https://images.unsplash.com/photo-1588072432836-e10032774350?w=600&h=400&fit=crop",
-        badge: "Popular"
+        name: "Happy Dino",
+        category: "Schoolbag",
+        brand: "Trust",
+        img: "https://ibb.co/LzRcPCqP",
+        badge: "Latest"
     },
     {
         name: "Campus Light 2026",
