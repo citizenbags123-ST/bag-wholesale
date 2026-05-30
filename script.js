@@ -14,15 +14,15 @@ const products = [
         img: "https://images.unsplash.com/photo-1581553680321-4fffae59fccd?w=600&h=400&fit=crop"
     },
     {
-        name: "Happy Dino",
-        category: "Schoolbag",
-        brand: "Trust",
-        img: "https://i.ibb.co/jvfQ5Lx5/Photo-from-Komil-Dudhwala-16.jpg",
+        name: "Happy Bear",
+        category: "School",
+        brand: "Generic",
+        img: "https://i.ibb.co/pjVb7F8k/Photo-from-Komil-Dudhwala-29.jpg",
         badge: "Latest"
     },
     {
         name: "Campus Light 2026",
-        category: "school",
+        category: "School",
         brand: "EduCarry",
         img: "https://images.unsplash.com/photo-1577401239170-897942555fb3?w=600&h=400&fit=crop"
     },
