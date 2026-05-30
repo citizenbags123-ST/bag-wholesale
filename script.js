@@ -17,7 +17,7 @@ const products = [
         name: "Happy Dino",
         category: "Schoolbag",
         brand: "Trust",
-        img: "https://ibb.co/LzRcPCqP",
+        img: "https://i.ibb.co/jvfQ5Lx5/Photo-from-Komil-Dudhwala-16.jpg",
         badge: "Latest"
     },
     {
