@@ -53,7 +53,7 @@ const products = [
         badge: "Premium"
     },
     {
-        name: "LaptopSleeve",
+        name: "Laptop Sleeve",
         category: "laptop",
         brand: "N/A",
         img: "https://i.ibb.co/twQgVsS2/Photo-from-Komil-Dudhwala-3.jpg"
@@ -78,7 +78,7 @@ function displayProducts(category) {
         : products.filter(p => p.category === category);
 
     if (filtered.length === 0) {
-        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-light); padding: 3rem;">No products found in this category. New stock arriving soon.</p>';
+        grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-light); padding: 3rem; font-weight: 300;">No products found in this category. New stock arriving soon.</p>';
         return;
     }
 
@@ -86,6 +86,8 @@ function displayProducts(category) {
         const card = document.createElement('div');
         card.className = 'product-card';
         card.style.animationDelay = `${index * 0.1}s`;
+        
+        // Removed explicit border and adjusted tags for minimalist look
         card.innerHTML = `
             <div class="product-image-wrapper">
                 <img src="${p.img}" alt="${p.name}" loading="lazy">
@@ -93,10 +95,27 @@ function displayProducts(category) {
             </div>
             <div class="product-info">
                 <h3>${p.name}</h3>
-                <p class="brand">by ${p.brand}</p>
-                <span class="category-tag">${p.category} bags</span>
+                ${p.brand !== 'N/A' ? `<p class="brand">by ${p.brand}</p>` : ''}
             </div>
         `;
+        
+        // Optional UX Upgrade: Click card to auto-scroll to form and pre-fill category
+        card.addEventListener('click', () => {
+            const formTarget = document.querySelector('#order');
+            const selectTarget = document.querySelector('#product');
+            
+            if(selectTarget && formTarget) {
+                selectTarget.value = p.category;
+                formTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Highlight the select briefly to show user it was auto-filled
+                setTimeout(() => {
+                    selectTarget.style.borderBottomColor = 'var(--accent)';
+                    setTimeout(() => selectTarget.style.borderBottomColor = '', 1000);
+                }, 800);
+            }
+        });
+
         grid.appendChild(card);
     });
 }
@@ -121,6 +140,7 @@ const navLinks = document.querySelector('.nav-links');
 if (menuToggle) {
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('open'); // Added for the 'X' animation
     });
 }
 
@@ -128,6 +148,7 @@ if (menuToggle) {
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        menuToggle.classList.remove('open'); // Reset icon
     });
 });
 
@@ -149,17 +170,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const form = document.getElementById('orderForm');
 const status = document.getElementById('formStatus');
 
-form.addEventListener('submit', function(e) {
-    status.textContent = 'Sending your enquiry...';
-    status.className = 'form-status';
-    
-    // Let Formspree handle the actual submission
-    // This provides visual feedback
-    setTimeout(() => {
-        status.textContent = '✓ Enquiry sent successfully! We\'ll get back to you within 24 hours.';
-        status.className = 'form-status success';
-    }, 1500);
-});
+if(form) {
+    form.addEventListener('submit', function(e) {
+        status.textContent = 'Sending your enquiry...';
+        status.className = 'form-status';
+        
+        // Formspree visual feedback simulation
+        setTimeout(() => {
+            status.textContent = '✓ Enquiry sent successfully! We\'ll get back to you within 24 hours.';
+            status.className = 'form-status success';
+        }, 1500);
+    });
+}
 
 // ====== SCROLL REVEAL ANIMATION ======
 const observerOptions = {
@@ -177,7 +199,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe sections for reveal animation
-document.querySelectorAll('.section, .section-alt').forEach(section => {
+document.querySelectorAll('.section, .section-alt, .hero').forEach(section => {
     section.style.opacity = '0';
     section.style.transform = 'translateY(30px)';
     section.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
